@@ -1,4 +1,4 @@
-#idndef _PRINTF_H
+#ifndef _PRINTF_H
 #define _PRINTF_H
 
 #include <stdarg.h>
@@ -35,6 +35,7 @@
 *@l_modifier: on if l_modifier is specified
 *
 */
+
 typedef struct parameters
 {
 unsigned int unsign : 1;
@@ -50,12 +51,15 @@ unsigned int precision : 1;
 unsigned int h_modifier : 1;
 unsigned int l_modifier : 1;
 } params_t;
+
 /**
 *struct specifier - Struct token
 *
 *@specified: format token
 *@f: The function associated
+*
 */
+
 typedef struct specifier
 {
 char *specifier;
@@ -98,7 +102,7 @@ int print_rot13(va_list ap, params_t *params);
 
 /* print number.c module */
 int _isdigit(int c);
-int _strlen(char *s); 
+int _strlen(char *s);
 int print_number(char *str, params_t *params);
 int print _number_right_shift(char *str, params_t *params);
 int print_number_left_shift(char *str, params_t *params);
