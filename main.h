@@ -20,7 +20,7 @@
 /**
 *struct parameters - parameters struct
 *
-*@unsigned: flag if unsigned value
+*@unsign: flag if unsigned value
 *
 *@plus_flag: on if plus_flag specified
 *@space_flag: on if hashtag_flag specified
@@ -55,7 +55,7 @@ unsigned int l_modifier : 1;
 /**
 *struct specifier - Struct token
 *
-*@specified: format token
+*@specifier: format token
 *@f: The function associated
 *
 */
