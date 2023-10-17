@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_char - prints character
+* print_char - prints the character
 * @ap: argument pointer
 * @params: the parameters struct
 *
