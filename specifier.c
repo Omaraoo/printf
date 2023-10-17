@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * get_specifier(char *s)) (va_list ap, params_t *params)
+ * get_specifier - finds the format function
  * @s: the format string
  *
  * Return: the number of bytes printed
 */
 
-int (*get specifier (char *s)) (va_list ap, params_t *params)
+int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
-specifier_t specifiers [] = {
+specifier_t specifiers[] = {
 ("c", print_char),
 ("d", print_int),
 ("i", print_int),
@@ -17,7 +17,7 @@ specifier_t specifiers [] = {
 ("%", print_percent),
 ("b", print_binary),
 ("o", print_octal),
-("u", print_unsigned),
+("u", print_unsigned int),
 ("x", print_hex),
 ("x", print_HEX),
 ("p", print_address),
@@ -35,9 +35,9 @@ if (*s == specifiers[i].specifier[0])
 return (specifiers[i].f);
 }
 i++;
-)
+}
 return (NULL);
-
+}
 /**
  * get_print_func - finds the format func
  * @s: the format string
@@ -125,7 +125,7 @@ char *get_width(char *s, params_t *params, va_list ap)
 int d = 0;
 if (*s == '+')
 {
-d= va_arg(ap, int);
+d = va_arg(ap, int);
 s++;
 }
 else
