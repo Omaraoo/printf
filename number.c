@@ -23,7 +23,7 @@ n = -num;
 sign = '-';
 
 }
-array = flags & CONVERT LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 ptr = &buffer[49];
 *ptr = '\0';
 
@@ -49,13 +49,13 @@ int print_unsigned(va_list ap, params_t *params)
 unsigned long l;
 
 if (params->l_modifier)
-1 = (unsigned long) va_arg(ap, unsigned long);
+l = (unsigned long) va_arg(ap, unsigned long);
 else if (params->h_modifier)
-1 = (unsigned short int)va_arg(ap, unsigned int);
+l = (unsigned short int)va_arg(ap, unsigned int);
 else
-1 = (unsigned int)va_arg(ap, unsigned int);
-params->unsiqn = 1;
-return (print_number(convert(1, 10, CONVERT_UNSIGNED, params), params));
+l = (unsigned int)va_arg(ap, unsigned int);
+params->unsign = l;
+return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
 }
 
 /**
