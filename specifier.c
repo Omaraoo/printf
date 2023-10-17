@@ -10,21 +10,21 @@
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
 specifier_t specifiers[] = {
-("c", print_char),
-("d", print_int),
-("i", print_int),
-("s", print_string),
-("%", print_percent),
-("b", print_binary),
-("o", print_octal),
-("u", print_unsigned int),
-("x", print_hex),
-("x", print_HEX),
-("p", print_address),
-("s", print_s),
-("r", print_rev),
-("R", print_rot13),
-(NULL, NULL)
+	{"c", print_char},
+	{"d", print_int},
+	{"i", print_int},
+	{"s", print_string},
+	{"%", print_percent},
+	{"b", print_binary},
+	{"o", print_octal},
+	{"u", print_unsigned},
+	{"x", print_hex},
+	{"x", print_HEX},
+	{"p", print_address},
+	{"s", print_S},
+	{"r", print_rev},
+	{"R", print_rot13},
+	{NULL, NULL}
 };
 int i = 0;
 
@@ -81,7 +81,7 @@ case '-':
 i = params->minus_flag = 1;
 break;
 case '0':
-i = params->zere_flag = 1;
+i = params->zero_flag = 1;
 break;
 }
 return (i);

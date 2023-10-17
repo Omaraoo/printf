@@ -1,3 +1,4 @@
+
 #include "main.h"
 
 /**
@@ -39,7 +40,7 @@ else if (params->h_modifier)
 l = (short int)va_arg(ap, int);
 else
 l = (int) va_arg(ap, int);
-return (print_number(convert(l, 10, 0, params), params));
+return (print_number(converts(l, 10, 0, params), params));
 }
 
 /**
@@ -122,7 +123,7 @@ if ((*str > 0 && *str < 32) || *str >= 127)
 {
 sum += _putchar('\\');
 sum += _putchar('X');
-hex = convert(*str, 16, 0, params);
+hex = converts(*str, 16, 0, params);
 if (!hex[1])
 sum += _putchar('0');
 sum += _puts(hex);

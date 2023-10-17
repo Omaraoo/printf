@@ -68,7 +68,7 @@ int print_number_right_shift(char *str, params_t *params)
 unsigned int n = 0, neg, neg2, i = _strlen(str);
 char pad_char = ' ';
 
-if (params->zero_flag && !params->minus flag)
+if (params->zero_flag && !params->minus_flag)
 pad_char = '0';
 neg = neg2 = (!params->unsign && *str == '-');
 if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
@@ -110,8 +110,8 @@ int print_number_left_shift(char *str, params_t *params)
 unsigned int n = 0, neg, neg2, i = _strlen(str);
 char pad_char = ' ';
 
-if (params->zero flag && !params->minus flag)
-pad char = 'O';
+if (params->zero_flag && !params->minus_flag)
+pad_char = 'O';
 neg = neg2 = (!params->unsign && *str == ' ');
 if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
 str++;
