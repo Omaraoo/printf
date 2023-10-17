@@ -2,7 +2,7 @@
 #define _PRINTF_H
 
 #include <stdarg.h>
-#include <stfdio.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
 #include <stdlib.h>
