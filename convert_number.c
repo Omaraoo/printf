@@ -77,7 +77,7 @@ char *str = convert(n, 2, CONVERT_UNSIGNED, params);
 int c = 0;
 
 if (params->hashtag_flag && n)
-*--str = '0'
+*--str = '0';
 params->unsign = 1;
 return (c += print_number(str, params));
 }
