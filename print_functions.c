@@ -65,7 +65,7 @@ if (params->precision < pad)
 j = pad = params->precision;
 if (params->minus_flag)
 {
-if (params->precision != 0)
+if (params->precision != UINT_MAX)
 for (i = 0; i < pad; i++)
 sum += _putchar(*str++);
 else
@@ -75,7 +75,7 @@ while (j++ < params->width)
 sum += _putchar(pad_char);
 if (!params->minus_flag)
 {
-if (params->precision != 0)
+if (params->precision != UINT_MAX)
 for (i = 0; i < pad; i++)
 sum += _putchar (*str++);
 else
@@ -121,7 +121,7 @@ for (; *str; str++)
 if ((*str > 0 && *str < 32) || *str >= 127)
 {
 sum += _putchar('\\');
-sum += _putchar('X');
+sum += _putchar('x');
 hex = convert(*str, 16, 0, params);
 if (!hex[1])
 sum += _putchar('0');
