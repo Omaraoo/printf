@@ -19,7 +19,7 @@ specifier_t specifiers[] = {
 	{"o", print_octal},
 	{"u", print_unsigned},
 	{"x", print_hex},
-	{"x", print_HEX},
+	{"X", print_HEX},
 	{"p", print_address},
 	{"s", print_S},
 	{"R", print_rot13},
