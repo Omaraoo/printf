@@ -29,7 +29,7 @@ return (sum);
  * Return: number chars printed
 */
 
-int print_int (va_list ap, params_t *params)
+int print_int(va_list ap, params_t *params)
 {
 long l;
 
@@ -65,7 +65,7 @@ if (params->precision < pad)
 j = pad = params->precision;
 if (params->minus_flag)
 {
-if (params->precision != UINT_MAX)
+if (params->precision != 0)
 for (i = 0; i < pad; i++)
 sum += _putchar(*str++);
 else
@@ -75,7 +75,7 @@ while (j++ < params->width)
 sum += _putchar(pad_char);
 if (!params->minus_flag)
 {
-if (params->precision != UINT_MAX)
+if (params->precision != 0)
 for (i = 0; i < pad; i++)
 sum += _putchar (*str++);
 else
