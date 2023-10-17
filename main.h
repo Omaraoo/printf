@@ -78,7 +78,7 @@ int print_percent(va_list ap, params_t *params);
 int print_S(va_list ap, params_t *params);
 
 /* number.c module */
-char *converts(long int num, int base, int flags, params_t *params);
+char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
@@ -104,7 +104,7 @@ int print_rot13(va_list ap, params_t *params);
 int _isdigit(int c);
 int _strlen(char *s);
 int print_number(char *str, params_t *params);
-int print _number_right_shift(char *str, params_t *params);
+int print_number_right_shift(char *str, params_t *params);
 int print_number_left_shift(char *str, params_t *params);
 
 /* params.c module */
