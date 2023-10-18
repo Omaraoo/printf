@@ -101,7 +101,7 @@ return (_putchar('%'));
 }
 
 /**
- * print_s - custom format specifier
+ * print_S - custom format specifier
  * @ap: argument pointer
  * @params: the parameters struct
  *
